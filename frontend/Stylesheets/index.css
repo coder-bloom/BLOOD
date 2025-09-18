@@ -1,0 +1,491 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body */
+body {
+  background-color: #fafafa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: linear-gradient(90deg, #fff, #fff3f3);
+  border-bottom: 2px solid #f5c2c2;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  width: 45px;
+  height: 45px;
+}
+
+.logo h1 {
+  font-size: 28px;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+.logo h1 span {
+  color: #b71c1c;
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav-links li {
+  cursor: pointer;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li:hover {
+  color: #b71c1c;
+}
+
+/* Hamburger Button */
+.menu-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  display: none; /* hidden on large screens */
+}
+
+/* Side Menu for small screens */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 240px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+  transition: right 0.3s ease;
+  padding-top: 60px;
+  z-index: 1000;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.side-menu ul li {
+  padding: 15px 20px;
+}
+
+.side-menu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.side-menu ul li a:hover {
+  color: #b71c1c;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* hide normal nav */
+  }
+
+  .menu-btn {
+    display: block; /* show hamburger */
+  }
+}
+
+.carousel {
+  position: relative;
+  max-width: 100%;
+  height: 400px;
+  overflow: hidden;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: none;
+}
+
+.carousel-inner img.active {
+  display: block;
+  animation: fade 1s;
+}
+
+@keyframes fade {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+.dots {
+  text-align: center;
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+}
+
+.dots span {
+  height: 12px;
+  width: 12px;
+  margin: 0 4px;
+  background: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dots .active {
+  background: #c80000;
+}
+
+/* Parent container */
+.parent2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #fce7e7, #fff5f5);
+  text-align: center;
+  border-radius: 15px;
+  margin: 40px auto;
+  max-width: 900px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Inner content */
+.child2 {
+  max-width: 700px;
+}
+
+.child2 h1 {
+  font-size: 2.5rem;
+  color: #c80000;
+  margin-bottom: 15px;
+}
+
+.child2 p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+/* Buttons container */
+.gchild {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn1, .btn2 {
+  padding: 12px 25px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+/* Request Blood button */
+.btn1 {
+  background: #c80000;
+  color: white;
+}
+
+.btn1:hover {
+  background: #a00000;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(200,0,0,0.4);
+}
+
+/* Donate Blood button */
+.btn2 {
+  background: white;
+  color: #c80000;
+  border: 2px solid #c80000;
+}
+
+.btn2:hover {
+  background: #c80000;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(200,0,0,0.3);
+}
+
+.app-section {
+  background: url("https://bloodlinks.in/uploads/app/mobile-app%20copy.jpg") no-repeat center center/cover;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* text right side */
+  padding: 0 10%;
+  color: white;
+  position: relative;
+  margin-top: 50px;
+}
+
+.app-text {
+  max-width: 500px;
+  text-align: left;
+  z-index: 2;
+}
+
+.app-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.app-text p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.buttons button {
+  padding: 12px 24px;
+  margin: 5px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn1 {
+  background: black;
+  color: white;
+}
+
+.btn2 {
+  background: white;
+  color: #b71c1c;
+}
+
+ .features-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  padding: 50px 10%;
+  background: #fff;
+}
+
+.feature-box {
+  text-align: center;
+  padding: 50px 20px;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.feature-box i {
+  font-size: 45px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.feature-box h3 {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+}
+
+.feature-box.red {
+  background: #b71c1c;
+}
+
+.feature-box.black {
+  background: #000;
+}
+
+.feature-box:hover {
+  transform: translateY(-8px);
+  cursor: pointer;
+}
+
+.benefits {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 8%;
+  gap: 40px;
+  background: #fff;
+}
+
+.benefits-left img {
+  max-width: 450px;
+  border-radius: 10px;
+}
+
+.benefits-right {
+  flex: 1;
+}
+
+.benefits-right h4 {
+  color: #b71c1c;
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.benefits-right h1 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.benefits-right p {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  font-size: 15px;
+}
+
+.benefits-list {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.benefits-list ul {
+  list-style: none;
+}
+
+.benefits-list li {
+  margin-bottom: 12px;
+  color: #333;
+  font-weight: 500;
+}
+
+.benefits-list i {
+  color: #b71c1c;
+  margin-right: 8px;
+}
+
+.explore-btn {
+  padding: 12px 25px;
+  background: #b71c1c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.explore-btn:hover {
+  background: #8b0000;
+}
+
+
+footer {
+  background: #6c0303;
+  color: #fff;
+  padding: 40px 20px 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-logo h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 8px 0;
+}
+
+.footer-links ul li a {
+  color: #bbb;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #fff;
+}
+
+.footer-social a {
+  color: #bbb;
+  font-size: 20px;
+  margin-right: 15px;
+  transition: 0.3s;
+}
+
+.footer-social a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  border-top: 1px solid #333;
+  padding-top: 10px;
+}
